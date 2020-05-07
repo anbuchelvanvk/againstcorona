@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+<!-- saved from url=(0014)about:internet -->
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>COVID-19</title>
+  <link rel="shortcut icon" type="images/x-icon" href="images/co.png">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="bootstrap.min.css">
+  <link href="css.css" rel="stylesheet">
+  <link rel="stylesheet" href="./font-awesome-4.7.0/css/font-awesome.min.css">
+  <script type="text/javascript" async="" src="init.js"></script>
+  <script src="jquery.min.js"></script>
+  <script src="jquery.waypoints.min.js" integrity="sha256-jDnOKIOq2KNsQZTcBTEnsp76FnfMEttF6AV2DF2fFNE="
+    crossorigin="anonymous"></script>
+  <script src="jquery.counterup.min.js" integrity="sha256-JtQPj/3xub8oapVMaIijPNoM0DHoAtgh/gwFYuN5rik="
+    crossorigin="anonymous"></script>
+  <script src="popper.min.js"></script>
+  <script src="bootstrap.min.js"></script>
+  <style type="text/css">
+    html {
+      scroll-behavior: smooth;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Muli', sans-serif;
+    }
+
+    .row {
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+    }
+
+    .navbar-dark {
+      background-color: #8a81fd !important
+    }
+
+    .navbar-dark a {
+      color: white;
+    }
+
+
+    /*////////////// main header \\\\\\\\\\\\\\*/
+
+    .main_header {
+      height: 450px;
+      width: 100%;
+    }
+
+    .rightside h1 {
+      font-size: 3rem;
+    }
+
+    .corona_rot img {
+      animation: gocorona 3s linear infinite;
+    }
+
+    @keyframes gocorona {
+      0% {
+        transform: rotate(0);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    .leftside img {
+      animation: heartbeat 5s linear infinite;
+    }
+
+    @keyframes heartbeat {
+      0% {
+        transform: scale(.75);
+      }
+
+      20% {
+        transform: scale(1);
+      }
+
+      40% {
+        transform: scale(.75);
+      }
+
+      60% {
+        transform: scale(1);
+      }
+
+      80% {
+        transform: scale(.75);
+      }
+
+      100% {
+        transform: scale(.75);
+      }
+    }
+
+
+
+    /************** corona update *************/
+
+    .corona_update {
+      margin: 0 0 30px 0;
+    }
+
+    .corona_update h3 {
+      color: #ff7675;
+    }
+
+    .corona_update h1 {
+      font-size: 2rem;
+      text-align: center;
+    }
+
+
+    /*////////////// about section //////////////*/
+
+    .sub_section {
+      background-color: #fbfafd;
+
+    }
+
+    /*//////////////// footer //////////*/
+
+    /*FOOTER*/
+
+    footer {
+      background: #8a81fd;
+      background: -webkit-linear-gradient(59deg, #3A6073, #16222A);
+      background: linear-gradient(59deg, #3A6073, #16222A);
+      color: white;
+      margin-top: 100px;
+    }
+
+    footer a {
+      color: #fff;
+      font-size: 14px;
+      transition-duration: 0.2s;
+    }
+
+    footer a:hover {
+      color: #FA944B;
+      text-decoration: none;
+    }
+
+    .copy {
+      font-size: 12px;
+      padding: 10px;
+      border-top: 1px solid #FFFFFF;
+    }
+
+    .footer-middle {
+      padding-top: 2em;
+
+      color: white;
+    }
+
+
+    /*SOCİAL İCONS*/
+
+    /* footer social icons */
+
+    ul.social-network {
+      list-style: none;
+      display: inline;
+      margin-left: 0 !important;
+      padding: 0;
+    }
+
+    ul.social-network li {
+      display: inline;
+      margin: 0 5px;
+    }
+
+
+    /* footer social icons */
+
+    .social-network a.icoFacebook:hover {
+      background-color: #3B5998;
+    }
+
+    .social-network a.icoTwitter:hover {
+      background-color: #007bb7;
+    }
+
+    .social-network a.icoyoutube:hover {
+      background-color: #ff0000;
+    }
+
+    .social-network a.icoFacebook:hover i,
+    .social-network a.icoTwitter:hover i,
+    .social-network a.icoyoutube:hover i {
+      color: #fff;
+    }
+
+    .social-network a.socialIcon:hover,
+    .socialHoverClass {
+      color: #44BCDD;
+    }
+
+    .social-circle li a {
+      display: inline-block;
+      position: relative;
+      margin: 0 auto 0 auto;
+      -moz-border-radius: 50%;
+      -webkit-border-radius: 50%;
+      border-radius: 50%;
+      text-align: center;
+      width: 30px;
+      height: 30px;
+      font-size: 15px;
+    }
+
+    .social-circle li i {
+      margin: 0;
+      line-height: 30px;
+      text-align: center;
+    }
+
+    .social-circle li a:hover i,
+    .triggeredHover {
+      -moz-transform: rotate(360deg);
+      -webkit-transform: rotate(360deg);
+      -ms--transform: rotate(360deg);
+      transform: rotate(360deg);
+      -webkit-transition: all 0.2s;
+      -moz-transition: all 0.2s;
+      -o-transition: all 0.2s;
+      -ms-transition: all 0.2s;
+      transition: all 0.2s;
+    }
+
+    .social-circle i {
+      color: #595959;
+      -webkit-transition: all 0.8s;
+      -moz-transition: all 0.8s;
+      -o-transition: all 0.8s;
+      -ms-transition: all 0.8s;
+      transition: all 0.8s;
+    }
+
+    .social-network a {
+      background-color: #F9F9F9;
+    }
+
+
+    /***************** top scroll **************/
+    #myBtn {
+      display: none;
+      /* Hidden by default */
+      position: fixed;
+      /* Fixed/sticky position */
+      bottom: 30px;
+      /* Place the button at the bottom of the page */
+      right: 40px;
+      /* Place the button 30px from the right */
+      z-index: 99;
+      /* Make sure it does not overlap */
+      border: none;
+      /* Remove borders */
+      outline: none;
+      /* Remove outline */
+      background-color: #00A8FF;
+      /* Set a background color */
+      color: white;
+      /* Text color */
+      cursor: pointer;
+      /* Add a mouse pointer on hover */
+      padding: 10px;
+      /* Some padding */
+      border-radius: 10px;
+      /* Rounded corners */
+    }
+
+    #myBtn:hover {
+      background: #606060;
+      /* Add a dark-grey background on hover */
+    }
+
+
+    /*//////////// responsive //////////////*/
+
+
+    @media(max-width:768px) {
+      .main_header {
+        height: 700px;
+        text-align: center;
+      }
+
+      .main_header h1 {
+        text-align: center;
+        padding: 0;
+        width: 100%;
+        font-size: 30px;
+      }
+
+
+      .count_style {
+        display: inline !important;
+      }
+
+      .count_style p {
+        text-align: center;
+      }
+
+      .about_res {
+        margin-left: 0 !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+
+  <style type="text/css">
+    #wh-widget-send-button {
+      margin: 0 !important;
+      padding: 0 !important;
+      position: fixed !important;
+      z-index: 16000160 !important;
+      bottom: 0 !important;
+      text-align: center !important;
+      height: 90px;
+      width: 60px;
+      visibility: visible;
+      transition: none !important;
+    }
+
+    #wh-widget-send-button.wh-widget-right {
+      right: 0;
+    }
+
+    #wh-widget-send-button.wh-widget-left {
+      left: 10px;
+    }
+
+    #wh-widget-send-button iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    div.clear {
+      clear: both;
+    }
+  </style>
+  <div class="container-fluid">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3 col-12 p-1"><a href="index.php"><img src="logo.png" class="img-fluid logo_img"></a></div>
+        <div class="col-md-5 col-12  p-3 d-none d-md-block">
+          <nav class="navbar contact-cont navbar-expand-lg ">
+            <ul class="navbar-nav ">
+              <li class="nav-item ">
+                <a class="nav-link text-dark icon_hd" href="#"><i class="fa fa-phone text-warning icon_hd"
+                    aria-hidden="true"></i> +91-11-23978046</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-dark icon_hd" href="#"><i class="fa fa-envelope text-warning icon_hd"
+                    aria-hidden="true"></i> ncov2019@gov.in</a>
+              </li>
+
+            </ul>
+          </nav>
+
+        </div>
+        <div class="col-md-4 p-3 mt-3">
+          <marquee class="heading">Stay Home Save Lives</marquee>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+  <nav class="navbar navbar-expand-lg navbar-dark ">
+    <a class="navbar-brand pl-4" href="#">Novel Corona Virus</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto pr-4">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="#about">About</a>
+        </li>
+
+        <li class="nav-item active">
+          <a class="nav-link" href="#sympid">Symptoms</a>
+        </li>
+
+        <li class="nav-item active">
+          <a class="nav-link" href="#preventid">Prevention</a>
+        </li>
+
+        <li class="nav-item active">
+          <a class="nav-link" href="#Contact%20Us">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div class="main_header">
+    <div class="row w-100 h-100">
+      <div class="col-lg-5 col-md-5 col-12 order-lg-1 order-2">
+        <div class="leftside w-100 h-100 d-flex justify-content-center align-items-center">
+          <img src="eksath.png" width="300" height="300">
+        </div>
+      </div>
+
+      <div class="col-lg-7 col-md-7 col-12 order-lg-2 order-1">
+        <div class="rightside w-100 h-100 d-flex justify-content-center align-items-center">
+          <h1>Let's Stay Safe &amp; Fight Together Against Cor<span class="corona_rot"> <img src="corona.png">
+            </span>na Virus</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- **************** corona latest updates ************** -->
+
+  <section class="corona_update">
+    <div class="mb-3">
+      <h3 class="text-uppercase text-center">covid-19 updates in Worldwide</h3>
+    </div>
+
+    <div class="d-flex justify-content-around align-items-center count_style">
+      <div>
+        <h1 class="count">31,16,992</h1>
+        <p>Confirmed</p>
+      </div>
+
+      <div>
+        <h1 class="count">190.95</h1>
+        <p>Cases per 1M people</p>
+      </div>
+
+
+      <div>
+        <h1 class="count">9,28,930</h1>
+        <p>Recovered</p>
+      </div>
+
+      <div>
+        <h1 class="count">2,17,183</h1>
+        <p>Deaths cases</p>
+      </div>
+      <div class="update_button">
+        <form action="https://google.com/covid19-map/?hl=en">
+          <center><button type="submit" class="btn btn-outline-success">Latest Update</button></center>
+        </form>
+      </div>
+    </div>
+
+
+  </section>
+
+  <!-- ****************** about section ********** -->
+
+  <div class="container-fluid sub_section pt-5 pb-5 " id="about">
+    <div class="section_header text-center mb-5 mt-4">
+      <h1> About COVID-19</h1>
+    </div>
+
+    <div class="row pt-5">
+      <div class="col-lg-5 col-md-6 col-12 ml-5 about_res">
+        <img src="aboutcorona.jpg" class="img-fluid">
+      </div>
+
+      <div class="col-lg-6 col-md-6 col-12">
+        <h2>What is COVID-19 (Corona-Virus) </h2>
+        <p>COVID-19 is the infectious disease caused by the most recently discovered coronavirus. This new virus and
+          disease were unknown before the outbreak began in Wuhan, China, in December 2019.</p>
+        <p>Coronaviruses are a large family of viruses which may cause illness in animals or humans. In humans, several
+          coronaviruses are known to cause respiratory infections ranging from the common cold to more severe diseases
+          such as Middle East Respiratory Syndrome (MERS) and Severe Acute Respiratory Syndrome (SARS). The most
+          recently discovered coronavirus causes coronavirus disease COVID-19. </p>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- /////////////// Coronavirus symptoms ////////////// -->
+
+  <div class="container-fluid  pt-5 pb-5 " id="sympid">
+    <div class="section_header text-center mb-5 mt-4">
+      <h1> Coronavirus symptoms</h1>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 col-md-4 col-12 mt-5">
+          <figure class="text-center">
+            <img src="cough.png" class="img-fluid " width="120" height="120">
+            <figcaption> cough</figcaption>
+          </figure>
+        </div>
+
+        <div class="col-lg-4 col-md-4 col-12 mt-5 ">
+          <figure class="text-center">
+            <img src="runnynose.png" class="img-fluid" width="120" height="120">
+            <figcaption> runny nose </figcaption>
+          </figure>
+        </div>
+
+        <div class="col-lg-4 col-md-4 col-12 mt-5 ">
+          <figure class="text-center">
+            <img src="fever.png" class="img-fluid" width="120" height="120">
+            <figcaption> fever </figcaption>
+          </figure>
+        </div>
+
+        <div class="col-lg-4 col-md-4 col-12 mt-5 ">
+          <figure class="text-center">
+            <img src="sick.png" class="img-fluid" width="120" height="120">
+            <figcaption> cold </figcaption>
+          </figure>
+        </div>
+
+        <div class="col-lg-4 col-md-4 col-12 mt-5 ">
+          <figure class="text-center">
+            <img src="week.png" class="img-fluid" width="120" height="120">
+            <figcaption> tiredness </figcaption>
+          </figure>
+        </div>
+
+        <div class="col-lg-4 col-md-4 col-12 mt-5 ">
+          <figure class="text-center">
+            <img src="breath.png" class="img-fluid" width="120" height="120">
+            <figcaption> difficulty breathing (severe cases) </figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+  <!-- /////////////// Prevention Against Coronavirus ////////////// -->
+
+  <div class="container-fluid sub_section  pt-5 pb-5 " id="preventid">
+    <div class="section_header text-center mb-5 mt-4">
+      <h1> 6 Steps Prevention Against Coronavirus </h1>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 col-md-4 col-12 mt-5">
+          <div class="row">
+            <div class="col-lg-4 col-md-4 col-12">
+              <figure>
+                <img src="handwash.png" class="img-fluid" width="90" height="90">
+              </figure>
+            </div>
+
+            <div class="col-lg8 col-md-8 col-12">
+              <p>Wash your hands regularly for 20 seconds, with soap and water or alcohol-based hand rub</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4  col-md-4  col-12 mt-5">
+          <div class="row">
+            <div class="col-lg-4 col-md-4 col-12 ">
+              <figure>
+                <img src="mask.png" class="img-fluid" width="90" height="90">
+              </figure>
+            </div>
+            <div class="col-lg-8 col-md-8 col-12">
+              <p>Cover your nose and mouth with a disposable tissue or flexed elbow when you cough or sneeze</p>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-lg-4  col-md-4  col-12 mt-5">
+          <div class="row">
+            <div class="col-lg-4 col-md-4 col-12 ">
+              <figure>
+                <img src="quarantine.png" class="img-fluid" width="90" height="90">
+              </figure>
+            </div>
+            <div class="col-lg-8 col-md-8 col-12">
+              <p>Avoid close contact (1 meter or 3 feet) with people who are unwell</p>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-lg-4  col-md-4  col-12 mt-5">
+          <div class="row">
+            <div class="col-lg-4 col-md-4 col-12 ">
+              <figure>
+                <img src="home.png" class="img-fluid" width="90" height="90">
+              </figure>
+            </div>
+            <div class="col-lg-8 col-md-8 col-12">
+              <p>Stay home and self-isolate from others in the household if you feel unwell</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4  col-md-4  col-12 mt-5">
+          <div class="row">
+            <div class="col-lg-4 col-md-4 col-12 ">
+              <figure>
+                <img src="news.png" class="img-fluid" width="90" height="90">
+              </figure>
+            </div>
+            <div class="col-lg-8 col-md-8 col-12">
+              <p>Stay informed by watching news &amp; follow the recommended practices</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4  col-md-4  col-12 mt-5">
+          <div class="row">
+            <div class="col-lg-4 col-md-4 col-12 ">
+              <figure>
+                <img src="medical.png" class="img-fluid" width="90" height="90">
+              </figure>
+            </div>
+            <div class="col-lg-8 col-md-8 col-12">
+              <p>If you have fever, cough and difficulty breathing, seek medical care early</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+  <!-- /////////////// Contact Us ASAP ////////////// -->
+
+  <div id="Contact Us" class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-4 mt-5 bg-light rounded">
+        <h1 class="text-center font-weight-bold text-primary">Corona Helpdesk</h1>
+        <hr class="bg-light">
+        <h5 class="text-center text-success"></h5>
+        <div class="form-group input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text"><i class="fa fa-user"></i></span>
+          </div>
+          <input type="text" name="name" class="form-control" placeholder="Enter your name" required="">
+        </div>
+        <div class="form-group input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text"><i class="fa fa-envelope"></i></span>
+          </div>
+          <input type="email" name="email" class="form-control" placeholder="Enter your email" required="">
+        </div>
+        <div class="form-group input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text"><i class="fa fa-at"></i></span>
+          </div>
+          <input type="text" name="subject" class="form-control" placeholder="Enter subject" required="">
+        </div>
+        <div class="form-group input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text"><i class="fa fa-comment-alt"></i></span>
+          </div>
+          <textarea name="msg" id="msg" class="form-control" placeholder="Write your message" cols="30" rows="4"
+            required=""></textarea>
+        </div>
+        <div class="form-group">
+          <a href="mailto:ncov2019@gov.in"><input type="submit" name="submit" id="submit" class="btn btn-primary btn-block" value="Send"></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ///////////// top cursor /////////// -->
+
+  <div class="container scrolltop float-right pr-5">
+    <button id="topBtn"><i class="fa fa-arrow-up" aria-hidden="true">
+        <style>
+          #topBtn {
+            position: fixed;
+            bottom: 40px;
+            right: 40px;
+            font-size: 22px;
+            width: 50px;
+            height: 50px;
+            background: rgb(0, 183, 255);
+            color: white;
+            border: none;
+            cursor: pointer;
+            display: none;
+          }
+        </style>
+        <script>$(document).ready(function () {
+
+            $(window).scroll(function () {
+              if ($(this).scrollTop() > 40) {
+                $('#topBtn').fadeIn();
+              } else {
+                $('#topBtn').fadeOut();
+              }
+            });
+
+            $("#topBtn").click(function () {
+              $('html ,body').animate({ scrollTop: 0 }, 800);
+            });
+          });
+        </script>
+      </i></button>
+  </div>
+
+  <!-- GetButton.io widget -->
+  <script type="text/javascript">
+    (function () {
+      var options = {
+        whatsapp: "+919013151515", // WhatsApp number
+        call_to_action: "Corona Helpdesk", // Call to action
+        position: "left", // Position may be 'right' or 'left'
+      };
+      var proto = document.location.protocol, host = "getbutton.io", url = proto + "//static." + host;
+      var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = url + '/widget-send-button/js/init.js';
+      s.onload = function () { WhWidgetSendButton.init(host, proto, options); };
+      var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);
+    })();
+  </script>
+  <!-- /GetButton.io widget -->
+
+  <!--------///// fotter ///////------->
+  <footer class="mainfooter" role="contentinfo">
+    <div class="footer-middle">
+      <div class="footer_middleup">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-3 col-sm-6 col-12 ">
+              <!--Column1-->
+              <div class="footer-pad">
+                <h4>Help India</h4>
+                <ul class="list-unstyled">
+                  <li><a href="#"></a></li>
+                  <li><a
+                      href="https://www.pmindia.gov.in/en/?query&amp;utm_source=pm-cares-fund-donation&amp;utm_campaign=PM-Cares-Fund&amp;utm_medium=website#">TAMIL NADU FUND</a></li>
+                  <img src="q.jpeg" width="101" height="90">
+                  <li><a href="http://www.wbfin.nic.in/New_Fin/HomePage.aspx"> EMERGENCY RELIEF FUND</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+              <!--Column1-->
+              <div class="footer-pad">
+                <h4>GOVT OF INDIA</h4>
+                <ul class="list-unstyled">
+                  <li><a href="https://pledge.mygov.in/stayathome/">Lockdown Certificate Apply</a></li>
+                  <li><a href="https://transformingindia.mygov.in/">Transforming India</a></li>
+                  <li><a href="https://self4society.mygov.in/">COVID-19 Self4sqciety</a></li>
+                  <li><a href="https://egreetings.gov.in/">eGreetings</a></li>
+                  <li><a href="https://quiz.mygov.in/">MyGov Quiz</a></li>
+                  <li><a href="https://innovate.mygov.in/">MyGov</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+              <!--Column1-->
+              <div class="footer-pad">
+                <h4>GOVT SERVICES</h4>
+                <ul class="list-unstyled">
+                  <li><a href="https://www.india.gov.in/">National Protal of India</a></li>
+                  <li><a href="https://www.digitalindia.gov.in/">Digital India</a></li>
+                  <li><a href="https://data.gov.in/">Data Govt</a></li>
+                  <li><a href="https://www.pmindia.gov.in/en/?query">PM Cares</a></li>
+                  <li><a href="http://meity.gov.in/">METY</a></li>
+                  <li>
+                    <a href="#"></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <h4>Follow Us</h4>
+              <ul class="social-network social-circle">
+                <li><a href="https://www.facebook.com/MyGovIndia/" class="icoFacebook" title="Facebook"><i
+                      class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                <li><a href="https://twitter.com/MoHFW_INDIA" class="icoTwitter" title="Twitter"><i
+                      class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                <li><a href="https://www.youtube.com/results?search_query=live+news" class="icoyoutube"
+                    title="youtube"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
+              </ul>
+              <br>
+              <ul>
+                <a target="_blank"
+                  href="https://docs.google.com/uc?export=download&amp;id=1tREqF17P6JHSYr23zcUxLO79dkI37_Dy"><img
+                    alt="Play Store" src="google.png" width="140" height="50"></a>
+                <ul>
+                  <a target="_blank"
+                    href="https://docs.google.com/uc?export=download&amp;id=1_9z7R0AvBp6JwEeu-eSvKv3pyPWL4Dcn"><img
+                      alt="Play Store" src="Windows.png" width="140" height="50"></a>
+                </ul>
+
+
+              </ul>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12 copy">
+              <p class="text-center">©2020. All rights reserved | Design by Anbuchelvan.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+
+  <script type="text/javascript">
+
+    $('.count').counterUp({
+      delay: 10,
+      time: 3000
+    })
+
+
+    mybutton = document.getElementById("myBtn");
+    // When the user scrolls down 100px from the top of the document, show the button
+    window.onscroll = function () { scrollFunction() };
+    function scrollFunction() {
+      if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        mybutton.style.display = "block";
+      } else {
+        mybutton.style.display = "none";
+      }
+    }
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+      document.body.scrollTop = 0; // For Safari
+      document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    }
+
+  </script>
+
+
+  <script>'undefined' === typeof _trfq || (window._trfq = []); 'undefined' === typeof _trfd && (window._trfd = []), _trfd.push({ 'tccl.baseHost': 'secureserver.net' }), _trfd.push({ 'ap': 'cpsh' }, { 'server': 'sg2plcpnl0233' }) // Monitoring performance to make your website faster. If you want to opt-out, please contact web hosting support.</script>
+  <script src="tcc_l.combined.1.0.6.min.js"></script>
+
+
+  <div id="wh-widget-send-button" class=" wh-widget-left" style="width: 261px; height: 94px;"><iframe
+      id="wh-widget-send-button-iframe" src="wSendButton.html"></iframe></div>
+</body>
+
+</html>
